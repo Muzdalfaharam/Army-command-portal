@@ -11,7 +11,7 @@ import './App.css';
 // Lazy load pages for better performance
 const Login = lazy(() => import('./pages/auth/Login'));
 const SignOut = lazy(() => import('./pages/auth/SignOut'));
-const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'));
+const Dashboard = lazy(() => import('./pages/dashboard2/Dashboard'));
 const UserDirectory = lazy(() => import('./pages/users/UserDirectory'));
 const UserDeepProfile = lazy(() => import('./pages/users/UserDeepProfile'));
 const FavoriteUsers = lazy(() => import('./pages/users/FavoriteUsers'));
