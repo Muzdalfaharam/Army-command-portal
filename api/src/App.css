@@ -1,0 +1,459 @@
+/* app.css - Complete Global Styles */
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background: var(--bg-primary, #FDFBF7);
+  color: var(--text-primary, #2C3E50);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--primary-500, #2C3E50);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h4 { font-size: clamp(1.125rem, 2.5vw, 1.35rem); }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+  text-decoration: none;
+  color: var(--secondary-500, #7C9A92);
+  transition: color var(--transition-fast, 0.15s ease);
+}
+
+a:hover {
+  color: var(--secondary-600, #5E7D74);
+}
+
+/* ============================================
+   SCROLLBAR STYLES
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-200, #F7F2E8);
+  border-radius: var(--radius-full, 9999px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-400, #87AB9B);
+  border-radius: var(--radius-full, 9999px);
+  transition: background var(--transition-fast, 0.15s ease);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-500, #7C9A92);
+}
+
+/* ============================================
+   SELECTION STYLES
+   ============================================ */
+::selection {
+  background: var(--secondary-300, #A5C0B4);
+  color: var(--primary-500, #2C3E50);
+}
+
+::-moz-selection {
+  background: var(--secondary-300, #A5C0B4);
+  color: var(--primary-500, #2C3E50);
+}
+
+/* ============================================
+   APP LAYOUT
+   ============================================ */
+.app-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Main Content Area */
+.main-content {
+  transition: margin-left var(--transition-base, 0.25s ease);
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+.main-content.sidebar-open {
+  margin-left: 260px;
+}
+
+.main-content.no-sidebar {
+  margin-left: 0;
+}
+
+/* ============================================
+   GLASS MORPHISM COMPONENTS
+   ============================================ */
+.glass {
+  background: var(--bg-glass, rgba(253, 251, 247, 0.8));
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light, rgba(44, 62, 80, 0.08));
+}
+
+.glass-dark {
+  background: var(--bg-glass-dark, rgba(245, 246, 250, 0.9));
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light, rgba(44, 62, 80, 0.08));
+}
+
+/* ============================================
+   CONTAINER CLASSES
+   ============================================ */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg, 24px);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--spacing-lg, 24px);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Margins */
+.m-0 { margin: 0; }
+.mt-1 { margin-top: var(--spacing-sm, 8px); }
+.mt-2 { margin-top: var(--spacing-md, 16px); }
+.mt-3 { margin-top: var(--spacing-lg, 24px); }
+.mt-4 { margin-top: var(--spacing-xl, 32px); }
+.mt-5 { margin-top: var(--spacing-2xl, 48px); }
+
+.mb-1 { margin-bottom: var(--spacing-sm, 8px); }
+.mb-2 { margin-bottom: var(--spacing-md, 16px); }
+.mb-3 { margin-bottom: var(--spacing-lg, 24px); }
+.mb-4 { margin-bottom: var(--spacing-xl, 32px); }
+.mb-5 { margin-bottom: var(--spacing-2xl, 48px); }
+
+/* Paddings */
+.p-0 { padding: 0; }
+.p-1 { padding: var(--spacing-sm, 8px); }
+.p-2 { padding: var(--spacing-md, 16px); }
+.p-3 { padding: var(--spacing-lg, 24px); }
+.p-4 { padding: var(--spacing-xl, 32px); }
+.p-5 { padding: var(--spacing-2xl, 48px); }
+
+/* Flexbox */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.gap-1 { gap: var(--spacing-sm, 8px); }
+.gap-2 { gap: var(--spacing-md, 16px); }
+.gap-3 { gap: var(--spacing-lg, 24px); }
+.gap-4 { gap: var(--spacing-xl, 32px); }
+
+/* Grid */
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+/* Width */
+.w-full { width: 100%; }
+.w-50 { width: 50%; }
+.w-33 { width: 33.333%; }
+.w-25 { width: 25%; }
+
+/* Height */
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.min-h-screen { min-height: 100vh; }
+
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+/* Z-Index */
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+input, textarea, select {
+  font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* ============================================
+   ANIMATION CLASSES
+   ============================================ */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease forwards;
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   404 PAGE STYLES
+   ============================================ */
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-glass, rgba(253, 251, 247, 0.8));
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.not-found-page h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--secondary-500, #7C9A92);
+  margin-bottom: 1rem;
+}
+
+.not-found-page p {
+  font-size: 1.25rem;
+  color: var(--text-secondary, #6B7B8D);
+  margin-bottom: 2rem;
+}
+
+.not-found-page button {
+  padding: 12px 24px;
+  background: var(--secondary-500, #7C9A92);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md, 10px);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.15s ease);
+}
+
+.not-found-page button:hover {
+  background: var(--secondary-600, #5E7D74);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 768px) {
+  .main-content.sidebar-open {
+    margin-left: 0;
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-5,
+  .grid-cols-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hide-on-mobile {
+    display: none;
+  }
+  
+  .show-on-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-md, 16px);
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-5,
+  .grid-cols-6 {
+    grid-template-columns: 1fr;
+  }
+  
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .glass, .glass-dark {
+    background: white;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}

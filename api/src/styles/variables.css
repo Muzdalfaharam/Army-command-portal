@@ -1,0 +1,98 @@
+/* Soft Professional Theme - No Black/White */
+
+:root {
+  /* Primary Colors - Soft Navy */
+  --primary-50: #E8EDF2;
+  --primary-100: #D1DCE5;
+  --primary-200: #A3B9CB;
+  --primary-300: #7595B1;
+  --primary-400: #477297;
+  --primary-500: #2C3E50;
+  --primary-600: #1F2C38;
+  --primary-700: #121A21;
+  
+  /* Secondary Colors - Sage Green */
+  --secondary-50: #F0F4F2;
+  --secondary-100: #E1EAE6;
+  --secondary-200: #C3D5CD;
+  --secondary-300: #A5C0B4;
+  --secondary-400: #87AB9B;
+  --secondary-500: #7C9A92;
+  --secondary-600: #5E7D74;
+  --secondary-700: #405F56;
+  
+  /* Accent Colors - Dusty Blue */
+  --accent-50: #EEF2F7;
+  --accent-100: #DDE5EF;
+  --accent-200: #BBCBE0;
+  --accent-300: #99B1D0;
+  --accent-400: #7797C0;
+  --accent-500: #8BA3C7;
+  --accent-600: #6B87AB;
+  --accent-700: #4B6B8F;
+  
+  /* Neutral Colors - Warm & Soft */
+  --neutral-50: #FDFBF7;
+  --neutral-100: #FBF8F2;
+  --neutral-200: #F7F2E8;
+  --neutral-300: #F2ECD9;
+  --neutral-400: #E8E0D0;
+  --neutral-500: #D5CDBD;
+  --neutral-600: #B8B0A0;
+  --neutral-700: #9A9282;
+  
+  /* Background Colors */
+  --bg-primary: #FDFBF7;
+  --bg-secondary: #F5F6FA;
+  --bg-tertiary: #F0F2F5;
+  --bg-glass: rgba(253, 251, 247, 0.75);
+  --bg-glass-dark: rgba(245, 246, 250, 0.85);
+  
+  /* Text Colors */
+  --text-primary: #2C3E50;
+  --text-secondary: #6B7B8D;
+  --text-tertiary: #9BA8B5;
+  --text-inverse: #FDFBF7;
+  
+  /* Border Colors */
+  --border-light: rgba(44, 62, 80, 0.08);
+  --border-medium: rgba(44, 62, 80, 0.15);
+  --border-dark: rgba(44, 62, 80, 0.25);
+  
+  /* Shadow Colors */
+  --shadow-sm: 0 2px 8px rgba(44, 62, 80, 0.04);
+  --shadow-md: 0 4px 16px rgba(44, 62, 80, 0.06);
+  --shadow-lg: 0 8px 32px rgba(44, 62, 80, 0.08);
+  --shadow-xl: 0 16px 48px rgba(44, 62, 80, 0.12);
+  --shadow-glass: 0 8px 32px rgba(44, 62, 80, 0.05);
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  
+  /* Z-Index */
+  --z-negative: -1;
+  --z-low: 10;
+  --z-medium: 20;
+  --z-high: 30;
+  --z-higher: 40;
+  --z-highest: 50;
+}

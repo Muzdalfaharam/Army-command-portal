@@ -1,0 +1,622 @@
+/* ==========================================================================
+   Advanced Dynamic Form - Professional Army Theme (Gold & Green)
+   ========================================================================== */
+
+/* 1. Page Wrapper & Moving Background Elements */
+.dynamic-form-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #1b5e4575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Full Page Background Image - Professional Army Theme */
+.dynamic-form-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/5399822/pexels-photo-5399822.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Background Floating Particles Effect (Moving Images Effect) */
+.dynamic-form-page::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.15;
+  animation: floatBackground 15s infinite alternate ease-in-out;
+  background: radial-gradient(circle, hsl(46, 79%, 50%) 0%, transparent 70%);
+  top: -20%;
+  right: -20%;
+}
+
+@keyframes floatBackground {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-80px, 60px) scale(1.3); }
+}
+
+/* 2. Main Content Container */
+.form-container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Header Section */
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hwb(46 23% 0%);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px hwb(46 24% 0% / 0.651);
+}
+
+.form-title::before {
+  content: '';
+  margin-right: 12px;
+  font-size: 2.2rem;
+}
+
+.form-subtitle {
+  color: hsl(148, 34%, 58%);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* 4. Multi-Step Progress Tracker (Horizontal Layout) */
+.form-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: hsla(0, 0%, 100%, 0.39);
+  border: 2px solid hsla(45, 77%, 59%, 0.541);
+  color: rgba(50, 170, 106, 0.534);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+
+.step-name {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: lab(50.16% -32.23 13.12);
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-line {
+  position: absolute;
+  top: 24px;
+  left: calc(50% + 24px);
+  right: calc(-50% + 24px);
+  height: 2px;
+  background: #b6993c77;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+/* Step Active & Completed States */
+.step.active .step-number {
+  background: #D4AF37;
+  border-color: #D4AF37;
+  color: #1a2a24;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.step.active .step-name {
+  color: #D4AF37;
+  font-weight: 700;
+}
+
+.step.completed .step-number {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.step.completed .step-name {
+  color: #c8d6c5;
+}
+
+.step.completed .step-line {
+  background: linear-gradient(90deg, #D4AF37, rgba(212, 175, 55, 0.2));
+}
+
+/* 5. Glassmorphism Card Wrapper - Professional Army Theme */
+.form-card {
+  background: linear-gradient(135deg, rgba(37, 58, 50, 0.95), rgba(30, 46, 40, 0.95)) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%) !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  border-radius: 28px !important;
+  padding: 40px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* 6. Form Grids & Layout Fields */
+.form-step {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #D4AF37;
+  margin-bottom: 28px;
+  border-left: 4px solid #D4AF37;
+  padding-left: 16px;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field.full-width {
+  grid-column: span 2;
+}
+
+.form-field label {
+  color: #c8d6c5;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+/* Input & Select Styling */
+.form-select,
+.form-input-raw,
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(10, 20, 16, 0.6);
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  color: #e8f0ec;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus,
+.form-input-raw:focus,
+.form-input:focus {
+  border-color: #D4AF37;
+  background: rgba(10, 20, 16, 0.8);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.form-select option {
+  background: #1a2a24;
+  color: #e8f0ec;
+}
+
+/* 7. Skills Tags Management Component */
+.skills-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.add-skill-btn {
+  background: rgba(212, 175, 55, 0.9);
+  color: #1a2a24;
+  border: none;
+  border-radius: 14px;
+  padding: 0 22px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-skill-btn:hover {
+  background: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.skill-tag {
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 7px 16px;
+  border-radius: 30px;
+  color: #D4AF37;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+}
+
+.skill-tag svg {
+  color: #7a9a8a;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 12px;
+}
+
+.skill-tag svg:hover {
+  color: #ef4444;
+}
+
+/* 8. Review Step Box Styling */
+.review-box {
+  background: rgba(10, 20, 16, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.review-section {
+  margin-bottom: 24px;
+}
+
+.review-section h4 {
+  color: #D4AF37;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.review-label {
+  color: #9ab8a8;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.review-value {
+  color: #e8f0ec;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Skills List in Review */
+.review-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.review-skill-tag {
+  background: rgba(212, 175, 55, 0.12);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #D4AF37;
+}
+
+/* 9. Checkbox Styling */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #c8d6c5;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #D4AF37;
+}
+
+/* 10. Action Buttons Control Panel */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding-top: 28px;
+}
+
+.right-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Button Styling */
+.btn-primary,
+.btn-outline,
+.btn-ghost {
+  padding: 12px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #D4AF37;
+  border: none;
+  color: #1a2a24;
+}
+
+.btn-primary:hover {
+  background: #c8a832;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  color: #D4AF37;
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #D4AF37;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  color: #9ab8a8;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 11. Success Screen Styling */
+.success-message {
+  text-align: center;
+  padding: 50px 20px;
+  animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-message svg {
+  font-size: 4.5rem;
+  color: #D4AF37;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+}
+
+.success-message h3 {
+  font-size: 1.8rem;
+  color: #D4AF37;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.success-message p {
+  color: #9ab8a8;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 12. Loading State */
+.loading-state {
+  text-align: center;
+  padding: 60px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(212, 175, 55, 0.2);
+  border-top-color: #D4AF37;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  color: #9ab8a8;
+}
+
+/* 13. Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .dynamic-form-page {
+    padding: 20px 16px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  .form-field.full-width {
+    grid-column: span 1;
+  }
+  
+  .form-card {
+    padding: 28px 20px !important;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+  
+  .step-name {
+    display: none;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .step-line {
+    top: 20px;
+    left: calc(50% + 20px);
+    right: calc(-50% + 20px);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .right-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .step-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-title::before {
+    font-size: 1.4rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  .step-line {
+    top: 18px;
+  }
+  
+  .right-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .right-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .skills-input-group {
+    flex-direction: column;
+  }
+  
+  .add-skill-btn {
+    padding: 12px;
+    justify-content: center;
+  }
+}

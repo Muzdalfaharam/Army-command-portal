@@ -1,0 +1,548 @@
+/* responsive.css - Complete Responsive Styles (FIXED) */
+
+/* ============================================
+   BASE RESPONSIVE SETTINGS
+   ============================================ */
+
+/* Mobile First Approach */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   CONTAINER RESPONSIVE
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 16px;
+}
+
+/* ============================================
+   GRID SYSTEM RESPONSIVE
+   ============================================ */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.col {
+  flex: 1;
+  padding: 0 8px;
+}
+
+/* Responsive Grid Classes */
+.col-1 { width: 8.333%; }
+.col-2 { width: 16.666%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.333%; }
+.col-5 { width: 41.666%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333%; }
+.col-8 { width: 66.666%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.333%; }
+.col-11 { width: 91.666%; }
+.col-12 { width: 100%; }
+
+/* ============================================
+   BREAKPOINT: MOBILE (< 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  /* Typography */
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Spacing */
+  .container {
+    padding: 0 12px;
+  }
+  
+  /* Grid */
+  .col-xs-1 { width: 8.333%; }
+  .col-xs-2 { width: 16.666%; }
+  .col-xs-3 { width: 25%; }
+  .col-xs-4 { width: 33.333%; }
+  .col-xs-5 { width: 41.666%; }
+  .col-xs-6 { width: 50%; }
+  .col-xs-7 { width: 58.333%; }
+  .col-xs-8 { width: 66.666%; }
+  .col-xs-9 { width: 75%; }
+  .col-xs-10 { width: 83.333%; }
+  .col-xs-11 { width: 91.666%; }
+  .col-xs-12 { width: 100%; }
+  
+  /* Hide on mobile */
+  .hide-xs {
+    display: none !important;
+  }
+  
+  /* Show on mobile */
+  .show-xs {
+    display: block !important;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 16px;
+  }
+  
+  /* Tables */
+  .table-responsive {
+    overflow-x: auto;
+    
+  }
+  
+  .table-responsive table {
+    min-width: 600px;
+  }
+}
+
+/* ============================================
+   BREAKPOINT: TABLET (480px - 768px)
+   ============================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Typography */
+  html {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  /* Grid */
+  .col-sm-1 { width: 8.333%; }
+  .col-sm-2 { width: 16.666%; }
+  .col-sm-3 { width: 25%; }
+  .col-sm-4 { width: 33.333%; }
+  .col-sm-5 { width: 41.666%; }
+  .col-sm-6 { width: 50%; }
+  .col-sm-7 { width: 58.333%; }
+  .col-sm-8 { width: 66.666%; }
+  .col-sm-9 { width: 75%; }
+  .col-sm-10 { width: 83.333%; }
+  .col-sm-11 { width: 91.666%; }
+  .col-sm-12 { width: 100%; }
+  
+  /* Hide on tablet */
+  .hide-sm {
+    display: none !important;
+  }
+  
+  /* Show on tablet */
+  .show-sm {
+    display: block !important;
+  }
+  
+  /* Navigation */
+  .navbar {
+    padding: 0 16px;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Grid layouts */
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   BREAKPOINT: DESKTOP (768px - 1024px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Grid */
+  .col-md-1 { width: 8.333%; }
+  .col-md-2 { width: 16.666%; }
+  .col-md-3 { width: 25%; }
+  .col-md-4 { width: 33.333%; }
+  .col-md-5 { width: 41.666%; }
+  .col-md-6 { width: 50%; }
+  .col-md-7 { width: 58.333%; }
+  .col-md-8 { width: 66.666%; }
+  .col-md-9 { width: 75%; }
+  .col-md-10 { width: 83.333%; }
+  .col-md-11 { width: 91.666%; }
+  .col-md-12 { width: 100%; }
+  
+  /* Hide on desktop */
+  .hide-md {
+    display: none !important;
+  }
+  
+  /* Grid layouts */
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   BREAKPOINT: LARGE DESKTOP (1024px - 1280px)
+   ============================================ */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Grid */
+  .col-lg-1 { width: 8.333%; }
+  .col-lg-2 { width: 16.666%; }
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.333%; }
+  .col-lg-5 { width: 41.666%; }
+  .col-lg-6 { width: 50%; }
+  .col-lg-7 { width: 58.333%; }
+  .col-lg-8 { width: 66.666%; }
+  .col-lg-9 { width: 75%; }
+  .col-lg-10 { width: 83.333%; }
+  .col-lg-11 { width: 91.666%; }
+  .col-lg-12 { width: 100%; }
+  
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* ============================================
+   BREAKPOINT: WIDE DESKTOP (> 1280px)
+   ============================================ */
+@media (min-width: 1281px) {
+  .col-xl-1 { width: 8.333%; }
+  .col-xl-2 { width: 16.666%; }
+  .col-xl-3 { width: 25%; }
+  .col-xl-4 { width: 33.333%; }
+  .col-xl-5 { width: 41.666%; }
+  .col-xl-6 { width: 50%; }
+  .col-xl-7 { width: 58.333%; }
+  .col-xl-8 { width: 66.666%; }
+  .col-xl-9 { width: 75%; }
+  .col-xl-10 { width: 83.333%; }
+  .col-xl-11 { width: 91.666%; }
+  .col-xl-12 { width: 100%; }
+  
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES FOR RESPONSIVE
+   ============================================ */
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+@media (max-width: 768px) {
+  .text-sm-left { text-align: left; }
+  .text-sm-center { text-align: center; }
+  .text-sm-right { text-align: right; }
+}
+
+/* Display Utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+
+@media (max-width: 768px) {
+  .d-sm-none { display: none; }
+  .d-sm-block { display: block; }
+  .d-sm-flex { display: flex; }
+}
+
+/* Flex Direction */
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+
+@media (max-width: 768px) {
+  .flex-sm-column { flex-direction: column; }
+  .flex-sm-row { flex-direction: row; }
+}
+
+/* Spacing Utilities */
+.m-0 { margin: 0; }
+.m-1 { margin: 4px; }
+.m-2 { margin: 8px; }
+.m-3 { margin: 16px; }
+.m-4 { margin: 24px; }
+.m-5 { margin: 32px; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: 4px; }
+.p-2 { padding: 8px; }
+.p-3 { padding: 16px; }
+.p-4 { padding: 24px; }
+.p-5 { padding: 32px; }
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+  .m-sm-0 { margin: 0; }
+  .m-sm-1 { margin: 4px; }
+  .m-sm-2 { margin: 8px; }
+  .m-sm-3 { margin: 16px; }
+  
+  .p-sm-0 { padding: 0; }
+  .p-sm-1 { padding: 4px; }
+  .p-sm-2 { padding: 8px; }
+  .p-sm-3 { padding: 16px; }
+}
+
+/* ============================================
+   SPECIFIC COMPONENT RESPONSIVE STYLES
+   ============================================ */
+
+/* Dashboard Responsive */
+@media (max-width: 768px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .dashboard-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* User Directory Responsive */
+@media (max-width: 768px) {
+  .user-filters {
+    flex-direction: column;
+  }
+  
+  .user-search {
+    width: 100%;
+  }
+  
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 20px auto;
+  }
+  
+  .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+/* Form Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
+
+/* Table Responsive (Fixed Scroll Line Error) */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .data-table {
+    min-width: 600px;
+  }
+}
+
+/* Navigation Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  
+  .navbar-mobile-toggle {
+    display: block;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+}
+
+/* Card Responsive */
+@media (max-width: 480px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-actions {
+    margin-top: 12px;
+  }
+}
+
+/* Chart Responsive */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 250px;
+  }
+  
+  .chart-legend {
+    flex-wrap: wrap;
+  }
+}
+
+/* Animation Responsive */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .card, .glass {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .glass {
+    background: white;
+    border: 2px solid black;
+  }
+  
+  .btn {
+    border: 2px solid black;
+  }
+  
+  .text-secondary {
+    color: black;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body.dark-mode-support {
+    background: #1a1a2e;
+    color: #ffffff;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  button, 
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .hover-lift:hover {
+    transform: none;
+  }
+}
+
+/* Landscape Mode */
+@media (orientation: landscape) and (max-height: 480px) {
+  .hero-section {
+    min-height: 0;
+    padding: 40px 0;
+  }
+}
+
+/* Retina Display */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-image {
+    image-rendering: pixelated; /* Modern replacement for crisp-edges warning */
+  }
+}

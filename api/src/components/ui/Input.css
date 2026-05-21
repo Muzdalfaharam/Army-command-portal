@@ -1,0 +1,103 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2C3E50;
+}
+
+.input-required {
+  color: #e74c3c;
+  margin-left: 4px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-left {
+  position: absolute;
+  left: 14px;
+  color: #9BA8B5;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  border: 1px solid rgba(44, 62, 80, 0.15);
+  border-radius: 12px;
+  color: #2C3E50;
+  transition: all 0.2s ease;
+}
+
+.input-field.with-left-icon {
+  padding-left: 42px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #7C9A92;
+  box-shadow: 0 0 0 3px rgba(124, 154, 146, 0.1);
+}
+
+.input-field:hover:not(:disabled) {
+  border-color: #7C9A92;
+}
+
+.input-field:disabled {
+  background: #F5F6FA;
+  cursor: not-allowed;
+}
+
+.input-field.input-error {
+  border-color: #e74c3c;
+}
+
+.input-error-message {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
+.input-password-toggle {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.input-password-toggle:hover {
+  opacity: 1;
+}
+
+/* Textarea variant */
+.input-field.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Search variant */
+.input-field.search {
+  padding-right: 40px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 14px;
+  color: #9BA8B5;
+}

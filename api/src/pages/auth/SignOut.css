@@ -1,0 +1,193 @@
+.signout-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.signout-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signout-card {
+  background: rgba(253, 251, 247, 0.92);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-radius: 32px;
+  padding: 48px 32px;
+  border: 1px solid rgba(44, 62, 80, 0.08);
+  text-align: center;
+}
+
+/* Icon */
+.signout-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 40px;
+}
+
+.signout-icon.warning {
+  background: rgba(241, 196, 15, 0.1);
+  color: #f39c12;
+}
+
+.signout-icon.loading {
+  background: rgba(124, 154, 146, 0.1);
+  color: #7C9A92;
+}
+
+.signout-icon.success {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.signout-icon.error {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Titles */
+.signout-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2C3E50;
+  margin: 0 0 12px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.signout-message {
+  color: #6B7B8D;
+  margin: 0 0 24px 0;
+  font-size: 14px;
+}
+
+/* User Info */
+.user-info-signout {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(245, 246, 250, 0.5);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.user-avatar-signout {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #7C9A92, #5E7D74);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-details {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name-signout {
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 14px;
+}
+
+.user-email-signout {
+  font-size: 12px;
+  color: #6B7B8D;
+}
+
+/* Actions */
+.signout-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(44, 62, 80, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.progress-fill {
+  width: 100%;
+  height: 100%;
+  background: #7C9A92;
+  animation: progress 1.5s ease forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Redirect Message */
+.redirect-message {
+  font-size: 13px;
+  color: #7C9A92;
+  margin: 16px 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signout-card {
+    padding: 32px 20px;
+  }
+  
+  .signout-title {
+    font-size: 24px;
+  }
+  
+  .signout-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+  }
+  
+  .signout-actions {
+    flex-direction: column;
+  }
+  
+  .user-info-signout {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-details {
+    text-align: center;
+  }
+}
